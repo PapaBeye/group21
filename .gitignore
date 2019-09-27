@@ -22,7 +22,7 @@
 
 
 # wiki files
-/wiki_images/*
+wiki_images/
 # Java class files
 *.class
 
