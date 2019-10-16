@@ -44,15 +44,22 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         if (menuItem.getItemId() == R.id.Nav_Event){
-            Toast.makeText(homeScreen.this, "Switching to Event page Activity",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this , Events_Page.class);
+            startActivity(intent);
         }
 
         if (menuItem.getItemId()== R.id.Nav_Food){
-            Toast.makeText(homeScreen.this, "Switching to Swipes page Activity",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this , food_swipes.class);
+            startActivity(intent);
         }
 
         if (menuItem.getItemId() == R.id.Nav_create_event){
-            Toast.makeText(homeScreen.this, "Switching to Create events page Activity",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this , Create_Events_Page.class);
+            startActivity(intent);
+
+        }
+        if (menuItem.getItemId() == R.id.Nav_HomeScreen){
+
 
         }
         return false;

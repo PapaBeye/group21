@@ -23,5 +23,11 @@
             android:title="@string/create_event"
             android:visible="true"
             myapp:showAsAction="always" />
+        <item
+            android:id="@+id/Nav_HomeScreen"
+            android:icon="@drawable/ic_home"
+            android:title="@string/Home"
+            android:visible="true"
+            myapp:showAsAction="always" />
     </group>
 </menu>
