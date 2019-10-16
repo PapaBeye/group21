@@ -59,8 +59,7 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         }
         if (menuItem.getItemId() == R.id.Nav_HomeScreen){
-
-
+            LayoutDrawer.closeDrawers();
         }
         return false;
     }
