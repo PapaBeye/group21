@@ -50,6 +50,7 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
             startActivity(intent);
         }
         if (menuItem.getItemId() == R.id.Nav_HomeScreen){
+            System.out.println("cbig check");
             Intent intent = new Intent(this , homeScreen.class);
             startActivity(intent);
         }
