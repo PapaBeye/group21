@@ -22,7 +22,7 @@
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
-            <TextView android:id="@+id/fstTxt"
+            <TextView android:id="@+id/instruction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
