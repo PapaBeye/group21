@@ -29,6 +29,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static edu.vcu.beyep.group21test.splashWelcomeTest2.childAtPosition;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
@@ -42,15 +43,30 @@ public class splashWelcomeTest {
 
     @Test
     public void splashWelcomeTest() {
-         // Added a sleep statement to match the app's execution delay.
- // The recommended way to handle such scenarios is to use Espresso idling resources:
-  // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-try {
- Thread.sleep(4000);
- } catch (InterruptedException e) {
- e.printStackTrace();
- }
-        
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try {
+            Thread.sleep(1000);
+            ViewInteraction textView = onView(
+                    allOf(withText("Home Screen"),
+                            childAtPosition(
+                            childAtPosition(withId(R.id.drawer), 0), 0), isDisplayed()));
+            textView.check(matches(withText("Home Screen")));
+            System.out.println("Home Screen Works");
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/*
         ViewInteraction textView = onView(
 allOf(withText("Home Screen"),
 childAtPosition(
@@ -466,3 +482,4 @@ isDisplayed()));
         };
     }
     }
+*/
