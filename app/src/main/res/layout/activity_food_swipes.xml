@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".homeScreen">
 
-    <ScrollView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="false">
-        <LinearLayout
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical" android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView android:id="@+id/loginscrn"
@@ -28,194 +28,122 @@
                 android:layout_marginTop="20dp"
                 android:text="Click to learn more about the different swipe locations!"
                 android:layout_gravity="center"/>
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Au Bon Pain" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Bleeker Street" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Chick-fil-a" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Chili's" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Croutons" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Cary Street Market and Deli" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Einstein's Bros - MCV Campus" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Einstein's Bros - Shafer Court Dining Center" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Freshii" />
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Harris Hall Convenience Store" />
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="IHOP Express" />
-
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Jonah's" />
-
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Market 810" />
-
-            <Button
-                android:id="@+id/button14"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Panda Express" />
-
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Pizza Hut Express" />
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="P.O.D. Market" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Raising Cane's" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Shake Smart" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Starbucks Coffee - Cabell Library" />
-
-            <Button
-                android:id="@+id/button20"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Starbucks Coffee - Cary and Belvidere" />
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Starbucks Coffee - Larrick Student Center" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Subway" />
-
-            <Button
-                android:id="@+id/button23"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:text="Taco Bell" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="wrap_content"
+            <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
