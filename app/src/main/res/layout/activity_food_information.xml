@@ -47,14 +47,13 @@
     <TextView
         android:id="@+id/linkToMenu"
         android:layout_width="226dp"
-        android:layout_height="122dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="83dp"
-        android:layout_marginBottom="39dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acceptsSwipes" />
 
@@ -71,4 +70,14 @@
         app:layout_constraintEnd_toStartOf="@+id/acceptsSwipes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descrtiption" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkToMenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

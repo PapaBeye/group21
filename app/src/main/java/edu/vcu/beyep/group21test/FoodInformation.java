@@ -3,6 +3,8 @@ package edu.vcu.beyep.group21test;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -18,11 +20,19 @@ import java.util.ArrayList;
 public class FoodInformation extends AppCompatActivity {
 
     ArrayList<String> numberlist = new ArrayList<>();
+    Button backme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_information);
+        backme = findViewById(R.id.backbutton);
+        backme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         get_json();
     }
