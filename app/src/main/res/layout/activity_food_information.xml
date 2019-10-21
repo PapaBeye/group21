@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodInformation">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="268dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descrtiption"
+        android:layout_width="302dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/acceptsSwipes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/acceptsSwipes"
+        android:layout_width="96dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="25dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/linkToMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/descrtiption" />
+
+    <TextView
+        android:id="@+id/linkToMenu"
+        android:layout_width="226dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="39dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acceptsSwipes" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="42dp"
+        android:text="Accepts Swipes:"
+        app:layout_constraintBottom_toTopOf="@+id/linkToMenu"
+        app:layout_constraintEnd_toStartOf="@+id/acceptsSwipes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descrtiption" />
+</androidx.constraintlayout.widget.ConstraintLayout>
