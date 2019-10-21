@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -30,7 +31,17 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
+        onPrepareOptionsMenu(nav_view.getMenu());
 
+    }
+
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        MenuItem item = menu.findItem(R.id.Nav_HomeScreen);
+        if ( item != null ) item.setVisible(false);
+        else return false;
+
+        return true;
     }
 
     @Override

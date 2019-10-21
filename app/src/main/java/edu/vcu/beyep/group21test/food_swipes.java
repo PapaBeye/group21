@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.view.Menu;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -108,6 +109,17 @@ public class food_swipes extends AppCompatActivity implements NavigationView.OnN
         button22.setOnClickListener(this);
         button23.setOnClickListener(this);
         button24.setOnClickListener(this);
+        onPrepareOptionsMenu(nav_view.getMenu());
+
+    }
+
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        MenuItem item = menu.findItem(R.id.Nav_Food);
+        if ( item != null ) item.setVisible(false);
+        else return false;
+
+        return true;
     }
 
     @Override

@@ -9,10 +9,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout layoutDrawer;
     private ActionBarDrawerToggle toggleDrawer;
@@ -23,18 +33,31 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events__page);
 
-        layoutDrawer =  findViewById(R.id.drawer);
+        layoutDrawer = findViewById(R.id.drawer);
         toggleDrawer = new ActionBarDrawerToggle(this, layoutDrawer, R.string.open, R.string.close);
 
         layoutDrawer.addDrawerListener(toggleDrawer);
         toggleDrawer.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Events_Page.this, EventInformation.class);
+                String num = "num";
+                switch(v.getId()){
+                    case R.id.button1:
+                        intent.putExtra(num, 0);
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
         NavigationView nav_view = findViewById(R.id.nav_drawer);
-        nav_view.setNavigationItemSelectedListener(this); 
+        nav_view.setNavigationItemSelectedListener(this);
 
-        onPrepareOptionsMenu( nav_view.getMenu() );
+        onPrepareOptionsMenu(nav_view.getMenu());
 
     }
 
@@ -62,7 +85,7 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         if (menuItem.getItemId()== R.id.Nav_Food){
-            Intent intent = new Intent(this , food_swipes.class);
+            Intent intent = new Intent(Events_Page.this , food_swipes.class);
             startActivity(intent);
         }
         else if (menuItem.getItemId() == R.id.Nav_create_event){
@@ -77,12 +100,5 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         return false;
     }
 
-    // This method WILL responsible for retrieving and displaying events onto scroll area.
-    public void getEventListings() {
-
-
-
-        return;
-    }
 
 }
