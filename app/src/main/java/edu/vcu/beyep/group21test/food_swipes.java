@@ -19,6 +19,8 @@ import com.google.android.material.navigation.NavigationView;
 public class food_swipes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
     private DrawerLayout LayoutDrawer;
     private ActionBarDrawerToggle toggleDrawer;
+    private Button BlickerButton;
+
 
     Button button1;
     Button button2;
