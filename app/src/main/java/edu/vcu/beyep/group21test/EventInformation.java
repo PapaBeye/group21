@@ -9,20 +9,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.io.InputStream;
 
-public class FoodInformation extends AppCompatActivity {
-
-    ArrayList<String> numberlist = new ArrayList<>();
+public class EventInformation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_information);
+        setContentView(R.layout.activity_event_information);
 
         get_json();
     }
@@ -31,7 +26,7 @@ public class FoodInformation extends AppCompatActivity {
         String json;
 
         try{
-            InputStream is = getAssets().open("swipes.json");
+            InputStream is = getAssets().open("events.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -42,8 +37,8 @@ public class FoodInformation extends AppCompatActivity {
 
             TextView name = findViewById(R.id.name);
             TextView description = findViewById(R.id.description);
-            TextView acceptsSwipes = findViewById(R.id.acceptsSwipes);
-            TextView linkToMenu = findViewById(R.id.linkToMenu);
+            TextView location = findViewById(R.id.location);
+            TextView fee = findViewById(R.id.fee);
 
             int num = getIntent().getIntExtra("num", 0);
 
@@ -52,13 +47,13 @@ public class FoodInformation extends AppCompatActivity {
 
             String id=jsonobject.optString("name");
             String value1=jsonobject.optString("description");
-            String value2=jsonobject.optString("accepts swipes");
-            String value3=jsonobject.optString("link to menu");
+            String value2=jsonobject.optString("location");
+            String value3=jsonobject.optString("fee");
 
             name.setText(id);
             description.setText(value1);
-            acceptsSwipes.setText(value2);
-            linkToMenu.setText(value3);
+            location.setText(value2);
+            fee.setText(value3);
 
         } catch (IOException a){
             a.printStackTrace();

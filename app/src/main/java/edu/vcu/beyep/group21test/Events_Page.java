@@ -8,10 +8,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private DrawerLayout LayoutDrawer;
     private ActionBarDrawerToggle toggleDrawer;
     @Override
@@ -25,6 +35,9 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
+
+        Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(this);
     }
 
     @Override
@@ -55,5 +68,18 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
             startActivity(intent);
         }
         return false;
+    }
+
+
+    @Override
+    public void onClick(View view) {
+            Intent intent = new Intent(this, EventInformation.class);
+            String num = "num";
+            switch(view.getId()){
+                case R.id.button1:
+                    intent.putExtra(num, 0);
+                    startActivity(intent);
+                    break;
+            }
     }
 }
