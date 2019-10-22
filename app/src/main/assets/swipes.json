@@ -1,0 +1,169 @@
+[
+	{
+		"name":"Au Bon Pain",
+		"description":"Au Bon Pain. Our name may be difficult to pronounce but simply put means, “from good bread.” Good bread is the foundation of any good meal. It is the key to a handcrafted sandwich, the essence of a sweet pastry, and the best way to turn a soup or salad into a meal. We pride ourselves on being a gourmet convenience where you live and work that offers good bread as the cornerstone of our marketplace.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.aubonpain.com/menu"
+	},
+
+	{
+		"name":"Bleeker Street",
+		"description":"Located on the first floor of Snead Hall, Bleecker St. is an urban-style bakery where artisan breads, pastries and baked goods are made fresh each day. Signature sandwiches and paninis are made to order on hot-from-the-oven breads using premium ingredients. A variety of sides and beverage options compliment the menu, as well as an assortment of sweets. Freshly brewed coffee and drinks from Java City are also available inside.",
+		"accepts swipes":"yes",
+		"link to menu":"N/A"
+	},
+
+	{
+		"name":"Chick-fil-a",
+		"description":"Chick-fil-A is conveniently located in the Park Place Food Court in the University Student Commons. An all-time favorite restaurant for many students, Chick-fil-A uses fresh ingredients to make classics like the Original Chicken Sandwich® and Waffle Potato Fries™.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.chick-fil-a.com"
+	},
+
+	{
+		"name":"Chili's",
+		"description":"Chili's Grill and Bar is the first full-service restaurant at Virginia Commonwealth University. Located on the first floor of the Cary & Belvidere Residential College, Chili's serves fresh mex creations, world famous Baby Back Ribs and sirloin steaks in a casual atmosphere. New “Lighter Choices” options and an expanded vegetarian menu provide a host of healthy, delicious dishes for both lunch and dinner. Limited free parking is available to customers in the Y lot across the street from Chili’s.",
+		"accepts swipes":"no",
+		"link to menu":"https://www.chilis.com/menu"
+	},
+
+	{
+		"name":"Croutons, Salads & Wraps",
+		"description":"Croutons, Salads & Wraps is a lighter, more plant-forward dining option at VCU. Incorporating fresh greens, crispy vegetables and a wide selection of proteins into each of its menu items, Croutons’ soups, salads and wraps are both delicious and satisfying.",
+		"accepts swipes":"yes",
+		"link to menu":"https://vcu.campusdish.com/LocationsAndMenus/CroutonsSaladsWraps#menusContent"
+	},
+
+	{
+		"name":"Cary Street Market & Deli",
+		"description":"Cary Street Market & Deli combines freshly-prepared hot foods, a salad bar, wholesome premium convenience items and traditional snack foods into a unique mini-market.",
+		"accepts swipes":"yes",
+		"link to menu":"N/A"
+	},
+
+	{
+		"name":"Einstein Bros. Bagels - MCV Campus",
+		"description":"Einstein Bros. Bagels is a fast-casual restaurant with two locations at Virginia Commonwealth University: one on the MCV Campus and one on the Monroe Park Campus. The MCV Campus Einstein’s Bros. Bagels is located on the first floor of the Gateway Building. Specializing in fresh-brewed coffees, soups, sandwiches and baked goods, Einstein’s Bros. Bagels offers a wide range of menu items served in an informal neighborhood atmosphere.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.einsteinbros.com/menu/"
+	},
+
+	{
+		"name":"Einstein Bros Bagels Shafer Court Dining Center",
+		"description":"Einstein Bros. Bagels is a fast-casual restaurant with two locations at Virginia Commonwealth University: one on the MCV Campus and one on the Monroe Park Campus. Specializing in fresh-brewed coffees, soups, sandwiches and baked goods, Einstein’s Bros. Bagels offers a wide range of menu items served in an informal neighborhood atmosphere. Conveniently located on the first floor of Shafer Court Dining Center.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.einsteinbros.com/menu/"
+	},
+
+	{
+		"name":"Freshii",
+		"description":"With a vision like, ‘Eat. Energize.,’ Freshii is focused on providing fresh and nutritious meal choices that energize people on the go. Conveniently located in the University Student Commons, Freshii is the perfect stop for lunch, dinner or a quick snack between classes. Students love Freshii’s wide selection of salads, wraps, bowls, burritos, smoothies, juices and more.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.menuwithprice.com/menu/freshii/"
+	},
+
+	{
+		"name":"Harris Hall Convenience Store",
+		"description":"No time to stop in between classes for lunch? Need a quick snack before lab? Harris Hall Convenience Store offers a selection of Grab & Go sandwiches, salads, fruit, snacks, bottled beverages, Eco Grounds coffee and more.",
+		"accepts swipes":"no",
+		"link to menu":"N/A"
+	},
+
+	{
+		"name":"IHOP Express",
+		"description":"Hello, late-night dining! IHOP Express features a classic, diner-style menu, including all-day breakfast options. ",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.ihop.com/en/menu"
+	},
+
+	{
+		"name":"Jonah's - a culinary emporium",
+		"description":"For a wide variety of exceptional dining options, visit Jonah's — a culinary emporium, located inside the Larrick Student Center on the MCV Campus. Jonah’s offers fresh salads, grilled entrees, deli meats, homemade breads, brick oven pizzas, comfort foods and decadent desserts.",
+		"accepts swipes":"yes",
+		"link to menu":"https://vcu.campusdish.com/LocationsAndMenus/Jonahs"
+	},
+
+	{
+		"name":"Market 810",
+		"description":"Forget what you thought you knew about campus dining. Atop the spiraling rotunda staircase inside Shafer Court Dining Center, Market 810 offers an “all-you-care-to-eat” atmosphere with its marketplace-style 'mini-restaurants.' The mini-restaurants include an expansive salad bar, stir-fry station, grill, sushi counter, bakery and more. Each mini-restaurant combines performance cooking with finished-to-order service, dishing out great tasting food with individual attention. ",
+		"accepts swipes":"no",
+		"link to menu":"https://vcu.campusdish.com/LocationsAndMenus/Market810"
+	},
+
+	{
+		"name":"Panda Express",
+		"description":"From the world famous Orange Chicken to the health-minded Wok Smart™ selections, Panda Express defines American Chinese cuisine with bold flavors and quality ingredients. Dishes are freshly prepared every day, and new menu offerings make for exciting dining options.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.pandaexpress.com/menu"
+	},
+
+	{
+		"name":"Pizza Hut Express",
+		"description":"Pizza Hut Express aims to satisfy every appetite. Located inside the University Student Commons, Pizza Hut Express offers personal pan pizzas, breadsticks, breakfast, dessert items and COMBO meals.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.pizzahut.com"
+	},
+
+	{
+		"name":"P.O.D. Market",
+		"description":"Provisions-on-Demand is a convenience store located in the University Student Commons. The location features an assortment of snacks, Java City coffee, F’real milkshakes, groceries, Grab & Go items and more.",
+		"accepts swipes":"yes",
+		"link to menu":"N/A"
+	},
+
+	{
+		"name":"Raising Cane's",
+		"description":"Raising Cane's is a fried chicken lover’s paradise. Get the classic combo: exceptional fried chicken fingers, fresh Texas toast and a thirst-quenching sweet tea, all served quickly and conveniently. Don’t forget a side of the special Cane’s sauce — a savory mix that packs extra flavor into every bite.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.menuwithprice.com/menu/raising-canes/virginia/richmond/114503/"
+	},
+
+	{
+		"name":"Shake Smart",
+		"description":"Shake Smart is making it easier to find healthy options while living the college on-the-go lifestyle. Located on the first floor of Shafer Court Dining Center.",
+		"accepts swipes":"yes",
+		"link to menu":"https://vcu.campusdish.com/-/media/Local/Higher-Education/GroupA/VirginiaCommonwealthUniv/Images/Shake-Smart-To-Go-Menu.ashx?la=en&hash=2408A6A504375401E413124D05795FA4340B2933"
+	},
+
+	{
+		"name":"Starbucks Coffee - Cabell Library",
+		"description":"A study break where you need it most! Starbucks Coffee in Cabell Library offers all of the coffees and blended beverages you have come to love, along with sandwiches and bakery treats. As one of the largest Starbucks locations on the East Coast, plenty of seating is available for both individual study or larger group meetings.",
+		"accepts swipes":"no",
+		"link to menu":"https://www.starbucks.com/menu"
+	},
+
+	{
+		"name":"Starbucks Coffee Cary & Belvidere",
+		"description":"Enjoy your favorite Starbucks Coffee treats such as blended beverages, drip coffees, pastries and lunch options. Conveniently located at the corner of Cary & Belvidere Streets. ",
+		"accepts swipes":"no",
+		"link to menu":"https://www.starbucks.com/menu"
+	},
+
+	{
+		"name":"Starbucks Coffee - Larrick Student Center",
+		"description":"Enjoy your favorite Starbucks Coffee treats such as blended beverages, drip coffees pastries and lunch options. Conveniently located inside Larrick Student Center.",
+		"accepts swipes":"no",
+		"link to menu":"https://www.starbucks.com/menu"
+	},
+
+	{
+		"name":"Subway",
+		"description":"Subway offers made-to-order sandwiches on a selection of freshly made subs. Whether you’d like the Veggie Delight or a toasted Subway Club, Subway in the University Student Commons will build you a sandwich that satisfies your fresh and fit craving.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.subway.com/en-US/MenuNutrition"
+	},
+
+	{
+		"name":"Taco Bell",
+		"description":"Located inside the University Student Commons in the center of the Monroe Park Campus, Taco Bell offers a full menu for lunch and dinner. With classics such as the Burrito Supreme, the Crunch Taco and the Crunchwrap Supreme, students can Live Más without having to leave campus.",
+		"accepts swipes":"yes",
+		"link to menu":"https://www.tacobell.com/food"
+	},
+
+	{
+		"name":"Wendy's",
+		"description":"This location on the MCV Campus features all of your favorites, including never frozen beef patties and the Frosty.",
+		"accepts swipes":"no",
+		"link to menu":"https://menu.wendys.com/en_US/categories/"
+	}
+]
