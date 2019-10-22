@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">group21test</string>
+    <string name="event">Event</string>
+    <string name="food">Food</string>
+    <string name="create_event">Create Event</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="Home">Home</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:myapp="http://schemas.android.com/tools">
+
+    <group>
+        <item
+            android:id="@+id/Nav_Event"
+            android:enabled="true"
+            android:icon="@drawable/ic_event"
+            android:menuCategory="container"
+            android:title="@string/event"
+            android:visible="true"
+            myapp:showAsAction="always" />
+        <item
+            android:id="@+id/Nav_Food"
+            android:icon="@drawable/ic_food"
+            android:title="@string/food"
+            android:visible="true"
+            myapp:showAsAction="always" />
+        <item
+            android:id="@+id/Nav_create_event"
+            android:icon="@drawable/ic_create_event"
+            android:title="@string/create_event"
+            android:visible="true"
+            myapp:showAsAction="always" />
+        <item
+            android:id="@+id/Nav_HomeScreen"
+            android:icon="@drawable/ic_home"
+            android:title="@string/Home"
+            android:visible="true"
+            myapp:showAsAction="always" />
+    </group>
+
+</menu>
