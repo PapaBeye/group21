@@ -29,6 +29,18 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student
+* When I am on the swipe info page
+* I should see the details regarding the swiping option
+* When I want to return to the see other locations with swipe options
+* I should see click the back button and see the other locations
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS3 {
@@ -127,7 +139,7 @@ public class SwipeInformationS3 {
 
     }
 
-    // Test oracle
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

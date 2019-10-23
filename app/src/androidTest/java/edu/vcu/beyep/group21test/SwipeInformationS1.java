@@ -25,6 +25,15 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student
+* When I am on the food/swipe page.
+* I should see various food place options that allow swiping.
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS1 {
@@ -75,7 +84,7 @@ public class SwipeInformationS1 {
         linearLayout.check(matches(isDisplayed()));
     }
 
-    // Test oracle
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

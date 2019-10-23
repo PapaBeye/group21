@@ -27,9 +27,12 @@ import static org.hamcrest.Matchers.allOf;
 
 
 /*
-* This test
+* This test verifies the following USER scenario
 *
 *
+* Given that I am on the any page
+* When i click on the menu/hamburger bar
+* I should be able to see food option and to go to the food page
 * */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -80,6 +83,9 @@ public class MainScreenS3 {
                         isDisplayed()));
         linearLayout.check(matches(isDisplayed()));
     }
+
+
+    // Test matcher defined by expresso
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

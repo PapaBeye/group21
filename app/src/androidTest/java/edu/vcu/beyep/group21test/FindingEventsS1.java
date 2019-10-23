@@ -143,6 +143,9 @@ public class FindingEventsS1 {
         checkedTextView3.check(matches(isDisplayed()));
     }
 
+
+    // Test matcher defined by expresso
+
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

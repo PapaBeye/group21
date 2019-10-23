@@ -31,7 +31,8 @@ import static org.hamcrest.Matchers.is;
 
 
 /*
-* This Test verifies the following user stories
+* This test verifies the following USER scenario
+*
 * Given that I’ve clicked on the events button
 * When I select an a specific event to view
 * I should see the event’s information
@@ -107,7 +108,7 @@ public class FindingEventsS2 {
 
     }
 
-    //
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

@@ -29,6 +29,14 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student.
+* When I click on a swipe location on the swipes page.
+* I should see details regarding the swiping option related to the amount of swipes required to get food.
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS2 {
@@ -109,7 +117,7 @@ public class SwipeInformationS2 {
 
     }
 
-    // Test oracle
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

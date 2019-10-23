@@ -26,12 +26,11 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
 /*
-* The Test verifies the following USER Story
+* This test verifies the following USER scenario
+*
 * Given that i am on the main page
 * When click on the hamburger bar
 * I should see a navigation menu list slide on to my page
-*
-*
 *
 * */
 
@@ -121,6 +120,7 @@ public class MainScreenS1 {
         checkedTextView4.check(matches(isDisplayed()));
     }
 
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

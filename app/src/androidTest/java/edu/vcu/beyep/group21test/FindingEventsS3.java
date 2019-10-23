@@ -33,6 +33,7 @@ import static org.hamcrest.Matchers.is;
 /*
 *
 * This test verifies the following USER scenario
+*
 * Given that I’ve clicked on the events button
 * When I look at the information presented
 * I should be able to see a list of available events
@@ -116,6 +117,8 @@ public class FindingEventsS3 {
                         isDisplayed()));
         scrollView.check(matches(isDisplayed()));
     }
+
+    // Test matcher defined by expresso
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
