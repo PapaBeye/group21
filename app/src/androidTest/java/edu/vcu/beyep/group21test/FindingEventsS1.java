@@ -25,6 +25,19 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+
+/*
+* This Tests verifies the scenario
+*
+* Given that i click on the hamburger bar
+* When I click on events and am on the events page
+* I should not see events option on the hamburger because I am already on the page
+*
+* In this test we assert that all 3 options that exist are Home, Create Event
+*
+* */
+
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FindingEventsS1 {
@@ -43,6 +56,8 @@ public class FindingEventsS1 {
             e.printStackTrace();
         }
 
+        /*
+        * Display Hamburger Menu */
         ViewInteraction appCompatImageButton = onView(
                 allOf(withContentDescription("Open"),
                         childAtPosition(
@@ -54,6 +69,9 @@ public class FindingEventsS1 {
                         isDisplayed()));
         appCompatImageButton.perform(click());
 
+        /*
+        * Select Option 3 on Navigation drawer
+        * */
         ViewInteraction navigationMenuItemView = onView(
                 allOf(childAtPosition(
                         allOf(withId(R.id.design_navigation_view),
@@ -64,6 +82,9 @@ public class FindingEventsS1 {
                         isDisplayed()));
         navigationMenuItemView.perform(click());
 
+
+        /*
+         * Display Hamburger Menu */
         ViewInteraction appCompatImageButton2 = onView(
                 allOf(withContentDescription("Open"),
                         childAtPosition(
@@ -75,6 +96,8 @@ public class FindingEventsS1 {
                         isDisplayed()));
         appCompatImageButton2.perform(click());
 
+        /*
+         *  Check Hamburger Menu is displayed*/
         ViewInteraction recyclerView = onView(
                 allOf(withId(R.id.design_navigation_view),
                         childAtPosition(
@@ -86,6 +109,7 @@ public class FindingEventsS1 {
                         isDisplayed()));
         recyclerView.check(matches(isDisplayed()));
 
+        /* Check Home Item exist */
         ViewInteraction checkedTextView = onView(
                 allOf(withId(R.id.design_menu_item_text),
                         childAtPosition(
@@ -96,6 +120,7 @@ public class FindingEventsS1 {
                         isDisplayed()));
         checkedTextView.check(matches(isDisplayed()));
 
+        /* Check Create Event Item exist */
         ViewInteraction checkedTextView2 = onView(
                 allOf(withId(R.id.design_menu_item_text),
                         childAtPosition(
@@ -106,6 +131,7 @@ public class FindingEventsS1 {
                         isDisplayed()));
         checkedTextView2.check(matches(isDisplayed()));
 
+        /* Check Food Item exist */
         ViewInteraction checkedTextView3 = onView(
                 allOf(withId(R.id.design_menu_item_text),
                         childAtPosition(

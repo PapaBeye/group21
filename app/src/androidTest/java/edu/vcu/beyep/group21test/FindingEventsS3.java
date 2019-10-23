@@ -29,6 +29,15 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+/*
+*
+* This test verifies the following USER scenario
+* Given that I’ve clicked on the events button
+* When I look at the information presented
+* I should be able to see a list of available events
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FindingEventsS3 {

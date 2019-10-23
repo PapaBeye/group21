@@ -29,6 +29,18 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+/*
+* This Test verifies the following user stories
+* Given that I’ve clicked on the events button
+* When I select an a specific event to view
+* I should see the event’s information
+*
+*
+*/
+
+
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FindingEventsS2 {

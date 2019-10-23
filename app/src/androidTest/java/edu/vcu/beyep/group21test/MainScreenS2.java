@@ -26,6 +26,16 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
+
+
+/*
+* Given that I am on the main page
+* When i click on the menu/hamburger bar
+* I should be able to see create event option
+* When I click on the create event button
+* I should be able to go to the create event page
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class MainScreenS2 {

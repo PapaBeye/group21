@@ -25,6 +25,21 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+* The Test verifies the following USER Story
+* Given that i am on the main page
+* When click on the hamburger bar
+* I should see a navigation menu list slide on to my page
+*
+*
+*
+* */
+
+
+
+
+
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class MainScreenS1 {
