@@ -75,6 +75,7 @@ public class SwipeInformationS1 {
         linearLayout.check(matches(isDisplayed()));
     }
 
+    // Test oracle
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

@@ -38,6 +38,7 @@ public class SwipeInformationS2 {
 
     @Test
     public void swipeInformationS2() {
+
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
@@ -46,7 +47,9 @@ public class SwipeInformationS2 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         try {
+
             ViewInteraction appCompatImageButton = onView(
                     allOf(withContentDescription("Open"),
                             childAtPosition(
@@ -69,6 +72,7 @@ public class SwipeInformationS2 {
                             isDisplayed()));
             appCompatImageButton.perform(click());
 
+            // Testing navigation bar.
             ViewInteraction navigationMenuItemView = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.design_navigation_view),
@@ -79,6 +83,7 @@ public class SwipeInformationS2 {
                             isDisplayed()));
             navigationMenuItemView.perform(click());
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page.
             ViewInteraction appCompatButton = onView(
                     allOf(withId(R.id.button1), withText("Au Bon Pain"),
                             childAtPosition(
@@ -97,12 +102,14 @@ public class SwipeInformationS2 {
                             0),
                             isDisplayed()));
             viewGroup.check(matches(isDisplayed()));
+
         } catch (Exception e){
             System.out.println(e);
         }
 
     }
 
+    // Test oracle
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

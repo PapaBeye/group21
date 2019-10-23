@@ -58,6 +58,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             appCompatImageButton.perform(click());
 
+            //
             ViewInteraction navigationMenuItemView = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.design_navigation_view),
@@ -68,6 +69,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             navigationMenuItemView.perform(click());
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page. button1 id in activity_food_swipes xml.
             ViewInteraction appCompatButton = onView(
                     allOf(withId(R.id.button1), withText("Au Bon Pain"),
                             childAtPosition(
@@ -87,6 +89,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             viewGroup.check(matches(isDisplayed()));
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page.
             ViewInteraction button = onView(
                     allOf(withId(R.id.backbutton),
                             childAtPosition(
@@ -107,6 +110,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             appCompatButton2.perform(click());
 
+
             ViewInteraction linearLayout = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.drawer),
@@ -123,6 +127,7 @@ public class SwipeInformationS3 {
 
     }
 
+    // Test oracle
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
