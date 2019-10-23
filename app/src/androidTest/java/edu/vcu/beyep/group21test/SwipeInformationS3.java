@@ -42,7 +42,7 @@ public class SwipeInformationS3 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
