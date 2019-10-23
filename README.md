@@ -14,6 +14,8 @@ We also had some difficulties with espresso testing, as we began getting failing
 
 --------------------------
 Reference to Final Completed Commit For Iteration [d13b82a](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/commit/d13b82abd4f20755e6ca04ef99e07011a1dceb2f)
+
+SDK Related ERRORS ```bash E/Surface: getSlotFromBufferLocked: unknown buffer: 0xb40bcd00```
 ###### Test Files 
 
 + [SwipeInformationS1.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/SwipeInformationS1.java)
