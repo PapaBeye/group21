@@ -29,6 +29,16 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+/*
+*
+* This test verifies the following USER scenario
+*
+* Given that I’ve clicked on the events button
+* When I look at the information presented
+* I should be able to see a list of available events
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FindingEventsS3 {
@@ -42,7 +52,7 @@ public class FindingEventsS3 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -107,6 +117,8 @@ public class FindingEventsS3 {
                         isDisplayed()));
         scrollView.check(matches(isDisplayed()));
     }
+
+    // Test matcher defined by expresso
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

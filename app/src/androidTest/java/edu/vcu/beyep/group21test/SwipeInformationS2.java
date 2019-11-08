@@ -29,6 +29,14 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student.
+* When I click on a swipe location on the swipes page.
+* I should see details regarding the swiping option related to the amount of swipes required to get food.
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS2 {
@@ -38,15 +46,18 @@ public class SwipeInformationS2 {
 
     @Test
     public void swipeInformationS2() {
+
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         try {
+
             ViewInteraction appCompatImageButton = onView(
                     allOf(withContentDescription("Open"),
                             childAtPosition(
@@ -69,6 +80,7 @@ public class SwipeInformationS2 {
                             isDisplayed()));
             appCompatImageButton.perform(click());
 
+            // Testing navigation bar.
             ViewInteraction navigationMenuItemView = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.design_navigation_view),
@@ -79,6 +91,7 @@ public class SwipeInformationS2 {
                             isDisplayed()));
             navigationMenuItemView.perform(click());
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page.
             ViewInteraction appCompatButton = onView(
                     allOf(withId(R.id.button1), withText("Au Bon Pain"),
                             childAtPosition(
@@ -97,12 +110,14 @@ public class SwipeInformationS2 {
                             0),
                             isDisplayed()));
             viewGroup.check(matches(isDisplayed()));
+
         } catch (Exception e){
             System.out.println(e);
         }
 
     }
 
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
