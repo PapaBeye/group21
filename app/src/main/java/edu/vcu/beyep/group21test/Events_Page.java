@@ -7,10 +7,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -40,24 +42,13 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         toggleDrawer.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Button button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Events_Page.this, EventInformation.class);
-                String num = "num";
-                switch(v.getId()){
-                    case R.id.button1:
-                        intent.putExtra(num, 0);
-                        startActivity(intent);
-                        break;
-                }
-            }
-        });
+
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
 
         onPrepareOptionsMenu(nav_view.getMenu());
+
+        displayEvents();
 
     }
 
@@ -100,5 +91,20 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         return false;
     }
 
+
+
+    public boolean displayEvents() {
+
+        LinearLayout targetLayout = findViewById(R.id.eventListLayout);
+        /* NOW WE UNDERSTAND WHAT TO DO...
+        LayoutInflater layoutInflater = getLayoutInflater(); // Gets layout inflater from the current "context"
+        View recView = layoutInflater.inflate(R.layout.event_tab, null,false);
+        View recView2 = layoutInflater.inflate(R.layout.event_tab, null,false);
+        targetLayout.addView(recView);
+        targetLayout.addView(recView2);
+         */
+
+        return true;
+    }
 
 }
