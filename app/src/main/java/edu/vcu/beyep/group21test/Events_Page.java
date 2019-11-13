@@ -102,7 +102,7 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         View recView2 = layoutInflater.inflate(R.layout.event_tab, null,false);
         targetLayout.addView(recView);
         targetLayout.addView(recView2);
-         */
+        */
 
         return true;
     }
