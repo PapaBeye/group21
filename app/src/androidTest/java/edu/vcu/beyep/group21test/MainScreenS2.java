@@ -26,6 +26,19 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
+
+
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am on the main page
+* When i click on the menu/hamburger bar
+* I should be able to see create event option
+* When I click on the create event button
+* I should be able to go to the create event page
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class MainScreenS2 {
@@ -39,7 +52,7 @@ public class MainScreenS2 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -75,6 +88,8 @@ public class MainScreenS2 {
                         isDisplayed()));
         textView.check(matches(isDisplayed()));
     }
+
+    // Test matcher defined by expresso
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

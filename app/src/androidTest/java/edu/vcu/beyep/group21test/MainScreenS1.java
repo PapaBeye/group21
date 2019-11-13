@@ -25,6 +25,20 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+* This test verifies the following USER scenario
+*
+* Given that i am on the main page
+* When click on the hamburger bar
+* I should see a navigation menu list slide on to my page
+*
+* */
+
+
+
+
+
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class MainScreenS1 {
@@ -38,7 +52,7 @@ public class MainScreenS1 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread for app execution delay.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -106,6 +120,7 @@ public class MainScreenS1 {
         checkedTextView4.check(matches(isDisplayed()));
     }
 
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

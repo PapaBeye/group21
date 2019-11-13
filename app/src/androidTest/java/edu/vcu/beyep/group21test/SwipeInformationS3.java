@@ -29,6 +29,18 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student
+* When I am on the swipe info page
+* I should see the details regarding the swiping option
+* When I want to return to the see other locations with swipe options
+* I should see click the back button and see the other locations
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS3 {
@@ -42,7 +54,7 @@ public class SwipeInformationS3 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -58,6 +70,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             appCompatImageButton.perform(click());
 
+            //
             ViewInteraction navigationMenuItemView = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.design_navigation_view),
@@ -68,6 +81,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             navigationMenuItemView.perform(click());
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page. button1 id in activity_food_swipes xml.
             ViewInteraction appCompatButton = onView(
                     allOf(withId(R.id.button1), withText("Au Bon Pain"),
                             childAtPosition(
@@ -87,6 +101,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             viewGroup.check(matches(isDisplayed()));
 
+            // Test interaction with Au Bon Pain button from activity_food_swipes page.
             ViewInteraction button = onView(
                     allOf(withId(R.id.backbutton),
                             childAtPosition(
@@ -107,6 +122,7 @@ public class SwipeInformationS3 {
                             isDisplayed()));
             appCompatButton2.perform(click());
 
+
             ViewInteraction linearLayout = onView(
                     allOf(childAtPosition(
                             allOf(withId(R.id.drawer),
@@ -123,6 +139,7 @@ public class SwipeInformationS3 {
 
     }
 
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 

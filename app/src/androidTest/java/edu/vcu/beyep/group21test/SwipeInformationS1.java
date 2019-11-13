@@ -25,6 +25,15 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+* This test verifies the following USER scenario
+*
+*
+* Given that I am a student
+* When I am on the food/swipe page.
+* I should see various food place options that allow swiping.
+*
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class SwipeInformationS1 {
@@ -38,7 +47,7 @@ public class SwipeInformationS1 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000);
+            Thread.sleep(4000); // Sleeps on user level thread.
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -75,6 +84,7 @@ public class SwipeInformationS1 {
         linearLayout.check(matches(isDisplayed()));
     }
 
+    // Test matcher defined by expresso
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
