@@ -5,6 +5,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.util.Log;
+import android.widget.Button;
+import android.view.View;
+import android.widget.EditText;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -28,6 +32,21 @@ public class Create_Events_Page extends AppCompatActivity implements NavigationV
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
         onPrepareOptionsMenu(nav_view.getMenu());
+
+        Button submit = findViewById(R.id.submitButton);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            EditText title;
+            EditText date;
+            EditText time;
+            EditText description;
+            public void onClick(View view) {
+                title = (EditText)findViewById(R.id.inputTitle);
+                date = (EditText)findViewById(R.id.inputDate);
+                time = (EditText)findViewById(R.id.inputTime);
+                description = (EditText)findViewById(R.id.inputDescription);
+            }
+        });
 
     }
 
