@@ -17,29 +17,38 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 
 public class Create_Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
     private DrawerLayout LayoutDrawer;
     private ActionBarDrawerToggle toggleDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create__events__page);
+
         LayoutDrawer =  findViewById(R.id.drawer);
         toggleDrawer = new ActionBarDrawerToggle(this,LayoutDrawer, R.string.open,R.string.close);
+
         LayoutDrawer.addDrawerListener(toggleDrawer);
         toggleDrawer.syncState();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
+
         onPrepareOptionsMenu(nav_view.getMenu());
 
         Button submit = findViewById(R.id.submitButton);
 
         submit.setOnClickListener(new View.OnClickListener() {
+
             EditText title;
             EditText date;
             EditText time;
             EditText description;
+
             public void onClick(View view) {
                 title = (EditText)findViewById(R.id.inputTitle);
                 date = (EditText)findViewById(R.id.inputDate);

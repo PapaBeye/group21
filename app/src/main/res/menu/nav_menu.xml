@@ -28,6 +28,16 @@
             android:title="@string/Home"
             android:visible="true"
             myapp:showAsAction="always" />
+
+        <!-- This item's visibility will be false. Will set this to true for event list page -->
+        <!-- Placing filter icon just to see how it would look. -->
+        <item
+            android:id="@+id/Nav_Config"
+            android:icon="@drawable/filter_icon"
+            android:title="Configurations"
+            android:visible="false"
+            myapp:showAsAction="always" />
+
     </group>
 
 </menu>

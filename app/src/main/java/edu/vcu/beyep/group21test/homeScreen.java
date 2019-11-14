@@ -22,15 +22,21 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
         LayoutDrawer =  findViewById(R.id.drawer);
         toggleDrawer = new ActionBarDrawerToggle(homeScreen.this,LayoutDrawer, R.string.open,R.string.close);
+
         LayoutDrawer.addDrawerListener(toggleDrawer);
         toggleDrawer.syncState();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
+
         onPrepareOptionsMenu(nav_view.getMenu());
 
     }
@@ -38,6 +44,7 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
     public boolean onPrepareOptionsMenu(Menu menu) {
 
         MenuItem item = menu.findItem(R.id.Nav_HomeScreen);
+
         if ( item != null ) item.setVisible(false);
         else return false;
 
@@ -46,14 +53,17 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+
         if (toggleDrawer.onOptionsItemSelected(item)){
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
         if (menuItem.getItemId() == R.id.Nav_Event){
             Intent intent = new Intent(this , Events_Page.class);
             startActivity(intent);
@@ -72,6 +82,7 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
         if (menuItem.getItemId() == R.id.Nav_HomeScreen){
             LayoutDrawer.closeDrawers();
         }
+
         return false;
     }
 }
