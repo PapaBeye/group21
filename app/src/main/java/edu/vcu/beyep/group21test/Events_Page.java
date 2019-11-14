@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -106,6 +108,7 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
 
     // Implemented by Jared Artis, do not tinker with this unless your Jared Artis.
     public boolean displayEvents() throws JSONException {
+
         List<String> Evnts = new ArrayList<String>();
         Evnts = homeScreen.Events;
         ListIterator<String> litr = Evnts.listIterator();
