@@ -15,13 +15,18 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class EventInformation extends AppCompatActivity {
-    Button backme;
+
+    Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_event_information);
-        backme = findViewById(R.id.backeventlist);
-        backme.setOnClickListener(new View.OnClickListener() {
+
+        backButton = findViewById(R.id.backToEventList);
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -29,10 +34,11 @@ public class EventInformation extends AppCompatActivity {
         });
 
         get_json();
+
     }
 
     public void get_json(){
-        String json;
+
 
         try{
 
@@ -44,33 +50,29 @@ public class EventInformation extends AppCompatActivity {
             is.read(buffer);
             is.close();
 
-            json = new String(buffer,"UTF-8");
+            String json = new String(buffer,"UTF-8");
             JSONArray jsonarray = new JSONArray(json);
 
-            TextView name = findViewById(R.id.name);
-            TextView description = findViewById(R.id.description);
-            TextView location = findViewById(R.id.location);
-            TextView fee = findViewById(R.id.fee);
+            TextView viewName = findViewById(R.id.name);
+            TextView viewDescription = findViewById(R.id.description);
+            TextView viewLocation = findViewById(R.id.location);
+            TextView viewFee = findViewById(R.id.fee);
 
-            int num = getIntent().getIntExtra("num", 0);
+            int numRetrieved = getIntent().getIntExtra("num", 0);
+            JSONObject jsonobject= (JSONObject) jsonarray.get(numRetrieved);
 
+            String eventName = jsonobject.optString("name");
+            String eventDescription = jsonobject.optString("description");
+            String eventLocation = jsonobject.optString("location");
+            String eventFee = jsonobject.optString("fee");
 
-            JSONObject jsonobject= (JSONObject) jsonarray.get(num);
+            viewName.setText(eventName);
+            viewDescription.setText(eventDescription);
+            viewLocation.setText(eventLocation);
+            viewFee.setText(eventFee);
 
-            String id = jsonobject.optString("name");
-            String value1 = jsonobject.optString("description");
-            String value2 = jsonobject.optString("location");
-            String value3 = jsonobject.optString("fee");
-
-            name.setText(id);
-            description.setText(value1);
-            location.setText(value2);
-            fee.setText(value3);
-
-        } catch (IOException a){
-            a.printStackTrace();
-        } catch (JSONException a){
-            a.printStackTrace();
+        } catch (IOException | JSONException exc) {
+            exc.printStackTrace();
         }
 
     }
