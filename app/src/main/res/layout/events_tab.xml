@@ -2,79 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EventInformation">
+    tools:context=".EventInformation"
+    android:id="@+id/eventContainer"
+    android:layout_width="390dp"
+    android:layout_height="220dp"
+    android:layout_marginTop="16dp"
+    android:background = "@drawable/event_info_border"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal|center" >
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/eventContainer"
-        android:layout_width="390dp"
-        android:layout_height="233dp"
-        android:layout_marginTop="16dp"
-        android:background = "@drawable/event_info_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/containerBase"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/eventRow1"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/eventName"
-                    android:layout_width="343dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="EVENT_NAME" />
-
-                <ImageButton
-                    android:id="@+id/bookmarkButton"
-                    android:layout_width="94dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="400dp"
-                    app:srcCompat="@drawable/book_mark_icon1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/eventRow2"
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/eventDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="EVENT_DATE" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/eventRow3"
-                android:layout_width="match_parent"
-                android:layout_height="92dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/eventDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="92dp"
-                    android:layout_weight="1"
-                    android:text="EVENT_DESCRIPTION" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

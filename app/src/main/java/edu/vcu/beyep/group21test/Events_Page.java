@@ -3,15 +3,19 @@ package edu.vcu.beyep.group21test;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.icu.text.Edits;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,6 +28,9 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class Events_Page extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -48,8 +55,11 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         nav_view.setNavigationItemSelectedListener(this);
 
         onPrepareOptionsMenu(nav_view.getMenu());
-
-        displayEvents();
+        try {
+            displayEvents();
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -95,19 +105,56 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
 
 
     // Implemented by Jared Artis, do not tinker with this unless your Jared Artis.
-    public boolean displayEvents() {
-
+    public boolean displayEvents() throws JSONException {
+        List<String> Evnts = new ArrayList<String>();
+        Evnts = homeScreen.Events;
+        ListIterator<String> litr = Evnts.listIterator();
+        int cur = 0;
         // Just testing out Layout Inflater.
-        for (int i = 0; i < 5; i ++) {
-
+        for (int i = 0; i < Evnts.size(); i ++) {
+            String Stxt = Evnts.get(i);
+            JSONObject obj = new JSONObject(Stxt);
             LinearLayout baseLayout = (LinearLayout) findViewById(R.id.eventArea);
-
             LayoutInflater layoutInflater = getLayoutInflater(); // Retrieves layout inflater of the current context.
-            View retrievedView = layoutInflater.inflate(R.layout.events_tab , baseLayout, false);
-
-            baseLayout.addView(retrievedView);
-
-
+            ConstraintLayout retrievedView = (ConstraintLayout) layoutInflater.inflate( R.layout.events_tab, baseLayout, false);
+            ConstraintSet set = new ConstraintSet();
+            LinearLayout linearLayout = new LinearLayout(retrievedView.getContext());
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            linearLayout.setLayoutParams(params);
+            linearLayout.setOrientation(LinearLayout.VERTICAL);
+            linearLayout.setId(View.generateViewId());
+            TextView txtV = new TextView(linearLayout.getContext());
+            txtV.setText(obj.getString("Event_Name"));
+            txtV.setWidth(364);
+            txtV.setHeight(50);
+            txtV.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            txtV.setId(View.generateViewId());
+            linearLayout.addView(txtV,0);
+            txtV = new TextView(linearLayout.getContext());
+            txtV.setText(obj.getString("Location"));
+            txtV.setWidth(364);
+            txtV.setHeight(50);
+            txtV.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            txtV.setId(View.generateViewId());
+            linearLayout.addView(txtV,1);
+            txtV = new TextView(linearLayout.getContext());
+            txtV.setText(obj.getString("Description"));
+            txtV.setWidth(364);
+            txtV.setHeight(110);
+            txtV.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            txtV.setId(View.generateViewId());
+            linearLayout.addView(txtV,2);
+            retrievedView.addView(linearLayout,0);
+            set.clone(retrievedView);
+            set.connect(linearLayout.getId(),ConstraintSet.TOP,retrievedView.getId(),ConstraintSet.TOP,10);
+            set.applyTo(retrievedView);
+            baseLayout.addView((View) retrievedView);
         }
 
         return true;
