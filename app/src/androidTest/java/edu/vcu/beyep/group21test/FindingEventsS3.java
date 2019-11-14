@@ -19,26 +19,12 @@ import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.is;
 
-
-/*
-*
-* This test verifies the following USER scenario
-*
-* Given that I’ve clicked on the events button
-* When I look at the information presented
-* I should be able to see a list of available events
-*
-* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class FindingEventsS3 {
@@ -52,7 +38,7 @@ public class FindingEventsS3 {
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(4000); // Sleeps on user level thread.
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -78,47 +64,16 @@ public class FindingEventsS3 {
                         isDisplayed()));
         navigationMenuItemView.perform(click());
 
-        ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.button1), withText("Event1"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                2)));
-        appCompatButton.perform(scrollTo(), click());
-
-        ViewInteraction button = onView(
-                allOf(withId(R.id.backeventlist),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                4),
-                        isDisplayed()));
-        button.check(matches(isDisplayed()));
-
-        ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.backeventlist), withText("BACK"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                4),
-                        isDisplayed()));
-        appCompatButton2.perform(click());
-
-        ViewInteraction scrollView = onView(
+        ViewInteraction linearLayout = onView(
                 allOf(childAtPosition(
-                        allOf(withId(R.id.drawer),
+                        allOf(withId(R.id.eventContainer),
                                 childAtPosition(
-                                        withId(android.R.id.content),
-                                        0)),
+                                        withId(R.id.eventArea),
+                                        1)),
                         0),
                         isDisplayed()));
-        scrollView.check(matches(isDisplayed()));
+        linearLayout.check(matches(isDisplayed()));
     }
-
-    // Test matcher defined by expresso
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

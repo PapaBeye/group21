@@ -13,9 +13,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -30,7 +36,7 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
     private DrawerLayout  LayoutDrawer;
     private ActionBarDrawerToggle toggleDrawer;
     public static List<String> Events = new ArrayList<String>();
-
+    private ArrayAdapter<String> adapter ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +54,29 @@ public class homeScreen extends AppCompatActivity implements NavigationView.OnNa
         onPrepareOptionsMenu(nav_view.getMenu());
         Thread server = new ServerClient(homeScreen.this);
         server.start();
+        ListView listView = (ListView) findViewById(R.id.eventslist);
+
+        ArrayList<String> events = new ArrayList<>();
+        events.add("Ramfest");
+        events.add("Fall Fest");
+        events.add("VCU Mens BasketBall vs LSU");
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, events);
+        listView.setAdapter(adapter);
+
+        SearchView filter =  findViewById(R.id.search);
+        filter.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
 
     }
 
