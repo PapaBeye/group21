@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventInformation"></activity>
+        <activity android:name=".event_filter_page"></activity>
+        <activity android:name=".EventInformation" />
         <activity android:name=".FoodInformation" />
         <activity android:name=".food_swipes" />
         <activity android:name=".Create_Events_Page" />
