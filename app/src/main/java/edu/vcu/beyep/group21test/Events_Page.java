@@ -7,10 +7,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -40,24 +43,13 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         toggleDrawer.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Button button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Events_Page.this, EventInformation.class);
-                String num = "num";
-                switch(v.getId()){
-                    case R.id.button1:
-                        intent.putExtra(num, 0);
-                        startActivity(intent);
-                        break;
-                }
-            }
-        });
+
         NavigationView nav_view = findViewById(R.id.nav_drawer);
         nav_view.setNavigationItemSelectedListener(this);
 
         onPrepareOptionsMenu(nav_view.getMenu());
+
+        displayEvents();
 
     }
 
@@ -66,6 +58,7 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
     public boolean onPrepareOptionsMenu(Menu menu) {
 
         MenuItem item = menu.findItem(R.id.Nav_Event);
+
         if ( item != null ) item.setVisible(false);
         else return false;
 
@@ -100,5 +93,24 @@ public class Events_Page extends AppCompatActivity implements NavigationView.OnN
         return false;
     }
 
+
+    // Implemented by Jared Artis, do not tinker with this unless your Jared Artis.
+    public boolean displayEvents() {
+
+        // Just testing out Layout Inflater.
+        for (int i = 0; i < 5; i ++) {
+
+            LinearLayout baseLayout = (LinearLayout) findViewById(R.id.eventArea);
+
+            LayoutInflater layoutInflater = getLayoutInflater(); // Retrieves layout inflater of the current context.
+            View retrievedView = layoutInflater.inflate(R.layout.events_tab , baseLayout, false);
+
+            baseLayout.addView(retrievedView);
+
+
+        }
+
+        return true;
+    }
 
 }
