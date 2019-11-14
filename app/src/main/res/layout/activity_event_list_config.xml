@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".event_filter_page">
 
+    <!-- Contains list of options in strings.xml which contains "filterByOptionArray" string array -->
     <Spinner
         android:id="@+id/filterBySpinner"
         android:layout_width="364dp"
         android:layout_height="30dp"
         android:layout_marginTop="72dp"
+        android:entries = "@array/filterByOptionArray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,4 +31,16 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/applyFilterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="APPLY FILTER" 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
