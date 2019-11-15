@@ -23,6 +23,13 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+
+/*
+ * Given that I open the app
+ * While the app is loading
+ * I should be able to see a splash screen pop up at first and then the main screen
+ */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class HomeScreenS1 {

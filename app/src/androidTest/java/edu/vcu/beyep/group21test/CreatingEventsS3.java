@@ -27,6 +27,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+ * Given that I am on the event creation page.
+ * When I click on the description/details option.
+ * I should be able to add a description of what the events are about.
+ */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class CreatingEventsS3 {
