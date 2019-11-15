@@ -26,11 +26,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 
-/*
- * Given that I am on the event creation page.
- * When I click on Event Name
- * I should be able to set the name of the event.
- */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class CreatingEventsS1 {
@@ -40,6 +35,15 @@ public class CreatingEventsS1 {
 
     @Test
     public void creatingEventsS1() {
+        // Added a sleep statement to match the app's execution delay.
+        // The recommended way to handle such scenarios is to use Espresso idling resources:
+        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         ViewInteraction appCompatImageButton = onView(
                 allOf(withContentDescription("Open"),
                         childAtPosition(
@@ -61,15 +65,15 @@ public class CreatingEventsS1 {
                         isDisplayed()));
         navigationMenuItemView.perform(click());
 
-        ViewInteraction editText = onView(
-                allOf(withId(R.id.inputTitle), withText("Name"),
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.titlePrompt), withText("Enter title of event:"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.drawer),
                                         0),
-                                1),
+                                0),
                         isDisplayed()));
-        editText.check(matches(isDisplayed()));
+        textView.check(matches(isDisplayed()));
     }
 
     private static Matcher<View> childAtPosition(

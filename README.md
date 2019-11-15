@@ -30,3 +30,36 @@ SDK Related ERRORS `E/Surface: getSlotFromBufferLocked: unknown buffer: 0xb40bcd
 + [MainScreenS4.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/MainScreenS4.java)
 
 
+
+# Iteration #2
+-------------------
++ We began this iteration by working on setting up server, which has a folder with files for each event. Upon client connection, the server will load every event and send it to the client. 
++ We accomplished the CreatingEvents user story where the user is able to fill out a form about the event they want to create. Once they submit the event, the event information is stored in varaibles that will later on, in iteration 3, be sent to the server.
++ We also did the UsingFilter user story, where the user is able to type a letter or word and there is a live update of the events that correspond to what they type. 
++ Additionally, in the events page, we designed the events page to dynamically show the number of events available based on what is in the server.
++ Lastly, we aslo added to our home page so the user can see the event names listed.
+
+### Design Pattern
+For this iteration, we implemented the Strategy design patttern. In doing so, we created an interface, with a main function, which is where you define how you want to interact with your server. This way if we wanted to change from using a socket server to other types of servers, databases, or more you could do so by implementing the inferace and defining the main function. 
+On the server, we have the data (differnt events) and logic for how the data is accessed and transmitted. On the client side, the interface is used to follow server protocol. 
+
+*KNOWN ISSUE:* `E/zygote: Failed sending reply to debugger: Broken pipe` *HOWEVER TEST PASSED* 
+
+###### Test Files 
+
++ [CreatingEventsS1.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/CreatingEventsS1.java)
++ [CreatingEventsS2.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/CreatingEventsS2.java)     
++ [CreatingEventsS3.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/CreatingEventsS3.java)
+- [UsingFilterS1.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/UsingFilterS1.java)
+- [UsingFilterS2.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/UsingFilterS2.java)
+- [UsingFilterS3.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/UsingFilterS3.java)
++ [HomeScreenS1.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/HomeScreenS1.java)
+- [HomeScreenS2.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/HomeScreenS2.java)
++ [HomeScreenS3.java](https://github.com/vcu-cmsc355-fall2018/fall-19-project-group-21/blob/master/app/src/androidTest/java/edu/vcu/beyep/group21test/HomeScreenS3.java)
+
+
+
+
+
+
+
