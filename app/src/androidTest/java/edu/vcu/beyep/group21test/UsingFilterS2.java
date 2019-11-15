@@ -1,6 +1,14 @@
 package edu.vcu.beyep.group21test;
 
 
+/*
+* Given that I am a student
+* When I am on the Home Page
+* I should be able to click the search bar and type a certain letter or word
+* When I am doing so
+* I should be to see a live update of a list with the certain letter or word that I searched
+* */
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;

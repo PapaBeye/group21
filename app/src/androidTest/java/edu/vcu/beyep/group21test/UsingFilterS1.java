@@ -1,6 +1,13 @@
 package edu.vcu.beyep.group21test;
 
 
+/*
+* Given that I am an event seeker
+* When I am on the Home  page
+* I should be able to click on a search bar that allows me to type in an event I am looking for
+*
+* */
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
