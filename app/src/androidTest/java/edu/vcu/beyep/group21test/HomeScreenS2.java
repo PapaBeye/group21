@@ -23,6 +23,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
+/*
+ * Given that I am on the home screen
+ * When I look at the information on the page
+ * I should be able to see the name of the events
+ */
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class HomeScreenS2 {
