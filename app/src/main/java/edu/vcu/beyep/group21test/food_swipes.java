@@ -257,4 +257,5 @@ public class food_swipes extends AppCompatActivity implements NavigationView.OnN
                 break;
         }
     }
+
 }
