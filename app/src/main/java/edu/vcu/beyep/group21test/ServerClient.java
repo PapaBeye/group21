@@ -43,7 +43,7 @@ public class ServerClient extends Thread implements SeverInterface{
                 System.out.println(directory.toString());
                 directory.mkdir();
             }
-            Socket Cls = new Socket("34.68.33.7",80);
+            Socket Cls = new Socket("34.68.33.7",8999);
             int numfs = 1;
             int i = 0;
             while(i!=numfs) {
